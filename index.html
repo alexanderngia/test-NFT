@@ -21,7 +21,10 @@
   <body>
     <h1>DOM touchmove Event</h1>
 
-    <img src="//res.cloudinary.com/active-bridge/image/upload/slide1.jpg" />
+    <img
+      ontouchmove="pinchZoom(imageElement)"
+      src="//res.cloudinary.com/active-bridge/image/upload/slide1.jpg"
+    />
 
     <script>
       const pinchZoom = (imageElement) => {
