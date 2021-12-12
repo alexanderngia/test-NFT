@@ -151,7 +151,7 @@
 
       // Set the target element's outline to dashed to give a clear visual
       // indication the element received a move event.
-      ev.target.style.outline = "dashed";
+      ev.target.style.transforms = "scale(" + (diff1 + diff2) + ")";
 
       // Check this event for 2-touch Move/Pinch/Zoom gesture
       handle_pinch_zoom(ev);
