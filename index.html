@@ -22,11 +22,13 @@
     <h1>DOM touchmove Event</h1>
 
     <img
-      ontouchmove="pinchZoom(imageElement)"
+      id="P1_IMAGE"
       src="//res.cloudinary.com/active-bridge/image/upload/slide1.jpg"
     />
 
     <script>
+      const imageElement = document.getElementById("P1_IMAGE");
+
       const pinchZoom = (imageElement) => {
         let imageElementScale = 1;
 
