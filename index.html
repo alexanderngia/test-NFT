@@ -1,25 +1,57 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-  <title>Document</title>
-</head>
-<body>
-  <h1>DOM touchmove Event</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+    />
+    <title>Document</title>
+    <style>
+      figure.zoom {
+        background-position: 50% 50%;
+        position: relative;
+        width: 500px;
+        overflow: hidden;
+        cursor: zoom-in;
+      }
 
-<img id="demo-img" ontouchmove="myFunction(event)" src="https://images.pexels.com/photos/9980077/pexels-photo-9980077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></img>
-<p id="demo"></p>
+      figure.zoom img:hover {
+        opacity: 0;
+      }
 
-<script>
-function myFunction(event) {
-  event.preventDefault();
-  var x = event.touches[0].clientX;
-  var y = event.touches[1].clientY;
-  document.getElementById("demo-img").style.height= x + "px";
-  document.getElementById("demo-img").style.width= y + "px";
-  document.getElementById("demo").innerHTML = x + ", " + y;
-}
-</script>
-</body>
+      figure.zoom img {
+        transition: opacity 0.5s;
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM touchmove Event</h1>
+
+    <figure
+      class="zoom"
+      style="
+        background: url(https://images.pexels.com/photos/9965184/pexels-photo-9965184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      "
+      onmousemove="zoom(event)"
+      ontouchmove="zoom(event)"
+    >
+      <img
+        src="https://images.pexels.com/photos/9965184/pexels-photo-9965184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      />
+    </figure>
+
+    <script>
+      function zoom(e) {
+        var zoomer = e.currentTarget;
+        e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
+        e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
+        x = (offsetX / zoomer.offsetWidth) * 100;
+        y = (offsetY / zoomer.offsetHeight) * 100;
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+      }
+    </script>
+  </body>
 </html>
