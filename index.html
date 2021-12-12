@@ -19,7 +19,7 @@
     </style>
   </head>
   <body>
-    <h1>3</h1>
+    <h1>4</h1>
 
     <img src="https://cdn.brvn.vn/editor/2021/12/A33_Xiaomi-1_1639150112.jpg" />
     <img
@@ -94,6 +94,9 @@
           imageElement.style.zIndex = "";
         });
       };
+      document.querySelectorAll("img").forEach((element) => {
+        pinchZoom(element);
+      });
     </script>
   </body>
 </html>
