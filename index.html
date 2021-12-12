@@ -8,10 +8,15 @@
     />
     <title>Document</title>
     <style>
+      * {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
       figure.zoom {
         background-position: 50% 50%;
         position: relative;
-        width: 500px;
+        width: 100vw;
         overflow: hidden;
         cursor: zoom-in;
       }
@@ -35,8 +40,9 @@
       style="
         background: url(https://images.pexels.com/photos/9965184/pexels-photo-9965184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       "
-      onmousemove="zoom(event)"
-      ontouchmove="zoom(event)"
+      onmousemove="zoom(e)"
+      ontouchmove="zoom(e)"
+      ontouchend="zoom(e)"
     >
       <img
         src="https://images.pexels.com/photos/9965184/pexels-photo-9965184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
