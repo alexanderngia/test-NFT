@@ -94,6 +94,10 @@
           imageElement.style.zIndex = "";
         });
       };
+
+      document.querySelectorAll("img").forEach((element) => {
+        pinchZoom(element);
+      });
     </script>
   </body>
 </html>
