@@ -1,6 +1,6 @@
-const imageElement = document.getElementsByClassName("zoomImg");
-
 const pinchZoom = (imageElement) => {
+  const imageElement = document.getElementsByClassName("zoomImg");
+
   let imageElementScale = 1;
 
   let start = {};
