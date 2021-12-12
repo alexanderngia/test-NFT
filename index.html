@@ -31,10 +31,9 @@
     />
 
     <script>
-    const imageElement = HTMLCollectionOf<Element>("zoomImage");
+      const imageElement = document.getElementsByClassName("zoomImage");
 
       const pinchZoom = (imageElement) => {
-
         let imageElementScale = 1;
 
         let start = {};
