@@ -16,7 +16,7 @@
       figure.zoom {
         background-position: 50% 50%;
         position: relative;
-        width: 100vw;
+        width: 500px;
         overflow: hidden;
         cursor: zoom-in;
       }
@@ -38,14 +38,12 @@
     <figure
       class="zoom"
       style="
-        background: url(https://images.pexels.com/photos/8911867/pexels-photo-8911867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background: url(//res.cloudinary.com/active-bridge/image/upload/slide1.jpg);
       "
-      onmousemove="zoom(e)"
-      ontouchmove="zoom(e)"
+      onmousemove="zoom(event)"
+      ontouchmove="zoom(event)"
     >
-      <img
-        src="https://images.pexels.com/photos/8911867/pexels-photo-8911867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      />
+      <img src="//res.cloudinary.com/active-bridge/image/upload/slide1.jpg" />
     </figure>
 
     <script>
@@ -57,7 +55,6 @@
         y = (offsetY / zoomer.offsetHeight) * 100;
         zoomer.style.backgroundPosition = x + "% " + y + "%";
       }
-      function zoomEnd(e) {}
     </script>
   </body>
 </html>
