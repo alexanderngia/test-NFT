@@ -38,14 +38,13 @@
     <figure
       class="zoom"
       style="
-        background: url(https://images.pexels.com/photos/9965184/pexels-photo-9965184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background: url(https://images.pexels.com/photos/8911867/pexels-photo-8911867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       "
       onmousemove="zoom(e)"
       ontouchmove="zoom(e)"
-      ontouchend="zoom(e)"
     >
       <img
-        src="https://images.pexels.com/photos/9965184/pexels-photo-9965184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        src="https://images.pexels.com/photos/8911867/pexels-photo-8911867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       />
     </figure>
 
@@ -58,6 +57,7 @@
         y = (offsetY / zoomer.offsetHeight) * 100;
         zoomer.style.backgroundPosition = x + "% " + y + "%";
       }
+      function zoomEnd(e) {}
     </script>
   </body>
 </html>
