@@ -1,5 +1,3 @@
-const imageElement = document.getElementsByClassName("zoomImg");
-
 const pinchZoom = (imageElement) => {
   let imageElementScale = 1;
 
@@ -12,6 +10,7 @@ const pinchZoom = (imageElement) => {
       event.touches[0].pageY - event.touches[1].pageY
     );
   };
+  const imageElement = document.getElementsByClassName("zoomImg");
 
   imageElement.addEventListener("touchstart", (event) => {
     // console.log('touchstart', event);
